@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic");
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic");
+
+html body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.intro {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  display: table;
+  top: 0;
+  background-size: cover;
+}
+
+p, a {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+  font-family: Courier, monospace;
+  font-smoothing: antialiased;
+  margin: 0.8em 0;
+  font-size: 18px;
+  color: #fff;
+}
+
+.ghost,
+.glitch {
+  opacity: 0.25;
+}
+
+.intro .inner {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  max-width: none;
+}
+
+.content {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.content h1 {
+  font-family: 'Raleway', sans-serif;
+  color: #F5F5F5;
+  text-shadow: 0px 0px 300px #000;
+  font-size: 400%;
+}
+
+.btn {
+  border-radius: 9px;
+  font-family: 'oswald' , sans-serif;
+  color: #009966;
+  font-size: 135%;
+  padding: 10px 20px;
+  border: solid #009966 3px;
+  text_transform: uppercase;
+  text-decoration: none;
+}
+
+.btn:hover {
+  color: #fff;
+  border: solid #fff 3px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 12px 12px 12px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: 'Oswald', sans-serif;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #fff;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#message {
+  margin-left: -400px;
+  position: absolute;
+  height: 500px;
+  width: 700px;
+  left: 60%;
+  top: 55%;
+  font-size: 20px;
+}
+
+span {
+  font-size: 1.5em;
+  color: #009966;
+}
+
+#animate {
+  text-shadow: 0 0 8px rgba(209, 194, 165, 0.1);
+  position: absolute;
+  color: #4f4228;
+  bottom: 0;
+}
+
+#container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+#container:before {
+  pointer-events: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  content: "";
+  left: 0;
+  top: 0;
+}
+
+.fullscreen-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+
+.fullscreen-bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  @media (max-aspect-ratio: 16/9) {
+      width: 300%;
+      left: -100%;
+  }
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .fullscreen-bg-video {
+    height: 300%;
+    top: -100%;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .fullscreen-bg-video {
+    width: 300%;
+    left: -100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .fullscreen-bg {
+    background: url('../media/image.png') center center / cover no-repeat;
+  }
+
+  .fullscreen-bg-video {
+    display: none;
+  }
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+menu {
+  transition: background-color .5s;
+}
+
+.is-black .site-bg__overlay {
+  position: absolute;
+  background-color: rgba(1, 1, 1, 0.35);
+}
+
+.is-dark .site-bg__overlay {
+  position: absolute;
+  background-color: rgba(30, 31, 37, 0.45);
+}
+
+.site-bg__overlay {
+  position: absolute;
+  background-color: rgba(1, 1, 1, 0.65);
+}
+
+.site-bg__effect {
+  overflow: hidden;
+}
+
+.site-bg {
+  position: absolute;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.divide
+.site-bg__img,
+.site-bg__overlay,
+.site-bg__effect,
+.site-bg__canvas {
+  position: absolute;
+}
+
+.layer, .site-loader, .site-nav, .site-wrap, .section, .site-bg, .site-bg__img,
+.site-bg__video,
+.site-bg__overlay,
+.site-bg__effect,
+.site-bg__canvas, .cloud, .newsletter-overlay {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+
+

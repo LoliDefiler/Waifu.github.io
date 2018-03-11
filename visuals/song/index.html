@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+
+<!-- Mirrored from shindeiru.team/visuals/song/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 11 Mar 2018 00:57:15 GMT -->
+<head>
+	 <meta charset="UTF-8">
+	 <title> shindeiru visuals </title>
+	 <link rel='stylesheet' href='css/test.theme.css' id="theme">
+     <script src='js/test.js'></script>
+	 <link rel="stylesheet" href="css/style.css" /> 
+	 <link rel="icon" type="image/png" href="media/favicon.png" sizes="16x16"
+</head>
+
+<body onLoad="scrlsts()">
+
+	<div id='loading'>
+     <p>Loading&hellip;</p>
+	  <p class='msg'>- Initializing -</p>
+	</div>
+   <div id='no-audio'>
+  <h1>No Web Audio API</h1>
+  <p>Sorry, this experiment requires the Web Audio API.</p>
+  <a href='http://caniuse.com/#feat=audio-api' target='_blank'>See browser support</a>
+</div>
+	<script  src="js/index.js"></script>
+
+<div class="site-bg">
+      <canvas class="site-bg__canvas"></canvas>
+   </div>
+
+</body>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Disable Ctrl Key, Right click and F12 </title>
+<script language="JavaScript">
+
+//////////F12 disable code////////////////////////
+    document.onkeypress = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+           //alert('No F-12');
+            return false;
+        }
+    }
+    document.onmousedown = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+            //alert('No F-keys');
+            return false;
+        }
+    }
+document.onkeydown = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+            //alert('No F-keys');
+            return false;
+        }
+    }
+/////////////////////end///////////////////////
+
+
+//Disable right click script 
+//visit http://www.rainbow.arch.scriptmania.com/scripts/ 
+var message="Sorry, right-click has been disabled"; 
+/////////////////////////////////// 
+function clickIE() {if (document.all) {(message);return false;}} 
+function clickNS(e) {if 
+(document.layers||(document.getElementById&&!document.all)) { 
+if (e.which==2||e.which==3) {(message);return false;}}} 
+if (document.layers) 
+{document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;} 
+else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;} 
+document.oncontextmenu=new Function("return false") 
+// 
+function disableCtrlKeyCombination(e)
+{
+//list all CTRL + key combinations you want to disable
+var forbiddenKeys = new Array('a', 'n', 'c', 'x', 'v', 'j' , 'w', 's', 'u');
+var key;
+var isCtrl;
+if(window.event)
+{
+key = window.event.keyCode;     //IE
+if(window.event.ctrlKey)
+isCtrl = true;
+else
+isCtrl = false;
+}
+else
+{
+key = e.which;     //firefox
+if(e.ctrlKey)
+isCtrl = true;
+else
+isCtrl = false;
+}
+//if ctrl is pressed check if other key is in forbidenKeys array
+if(isCtrl)
+{
+for(i=0; i<forbiddenKeys.length; i++)
+{
+//case-insensitive comparation
+if(forbiddenKeys[i].toLowerCase() == String.fromCharCode(key).toLowerCase())
+{
+//alert('Key combination CTRL + '+String.fromCharCode(key) +' has been disabled.');
+return false;
+}
+}
+}
+return true;
+}
+</script>
+</head>
+<body onkeypress="return disableCtrlKeyCombination(event);" onkeydown="return disableCtrlKeyCombination(event);">
+</body>
+
+<script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'a2plcpnl0763'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='../../../img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script>
+<!-- Mirrored from shindeiru.team/visuals/song/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 11 Mar 2018 00:57:21 GMT -->
+</html>
